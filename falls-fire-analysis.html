@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falls Fire &mdash; Analysis · Ryan Li</title>
+<meta name="description" content="Falls Fire: Analysis">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="fire">
+<a id="top"></a><header class="topbar"><div class="wrap"><a class="mark" href="index.html">Ryan Li<span class="dot">.</span><small>SPECTRAL&nbsp;/&nbsp;SYSTEMS</small></a><nav class="nav"><a href="index.html#about">About</a><a href="index.html#work" class="here">Projects</a><a href="index.html#contact">Contact</a><a href="https://github.com/COMPRyanLI">GitHub</a></nav></div></header>
+<header class="cs-hero"><div class="wrap ticks"><div class="crumb"><a href="index.html#work">Projects</a> &nbsp;/&nbsp; Falls Fire</div><div class="cs-title"><div><div class="kicker"><a href="falls-fire.html">Falls Fire</a></div><h1>Analysis</h1></div></div></div></header><nav class="tabs" aria-label="Case study sections"><div class="wrap"><a class="tab" href="falls-fire.html"><span class="n">01</span>Overview</a><a class="tab" href="falls-fire-scope.html"><span class="n">02</span>Scope &amp; Data</a><a class="tab active" href="falls-fire-analysis.html" aria-current="page"><span class="n">03</span>Analysis</a><a class="tab" href="falls-fire-further.html"><span class="n">04</span>Further Study</a><a class="tab" href="falls-fire-sar.html"><span class="n">05</span>Why SAR Matters</a></div></nav><main class="cs-body"><div class="wrap">
+<p>The natural-colour pair was useful for context, but the burn signature stayed ambiguous. <strong>NBR made the disturbed central-northern zone much more legible, and dNBR most clearly isolated the fire-related change.</strong></p>
+
+<figure class="figure block" style="margin-top:1.4rem">
+  <svg viewBox="0 0 490 112" role="img" aria-label="Three schematic panels comparing RGB, post-fire NBR and dNBR views of the same burn scar">
+<g transform="translate(0,0)">
+  <rect x="0" y="0" width="150" height="112" rx="3" fill="#8a9b6a"/>
+  <path d="M18,96 C46,66 66,80 100,40 L136,26 L136,96 Z" fill="#4c5a37"/>
+  <path d="M40,92 C64,70 82,74 104,58 C92,80 78,96 66,100 C54,100 44,98 40,92 Z" fill="#5a4632"/>
+</g><g transform="translate(170,0)">
+  <rect x="0" y="0" width="150" height="112" rx="3" fill="#3E6b42"/>
+  <path d="M18,96 C46,66 66,80 100,40 L136,26 L136,96 Z" fill="#3E6b42"/>
+  <path d="M40,92 C64,70 82,66 104,50 C92,74 80,94 68,100 C54,100 44,98 40,92 Z" fill="#F3EEDE"/><path d="M56,92 C72,72 84,68 96,52" stroke="#26140f" stroke-width="3" fill="none" stroke-linecap="round"/>
+</g><g transform="translate(340,0)">
+  <rect x="0" y="0" width="150" height="112" rx="3" fill="#3E6b42"/>
+  <path d="M18,96 C46,66 66,80 100,40 L136,26 L136,96 Z" fill="#3E6b42"/>
+  <path d="M40,92 C64,70 82,66 104,50 C92,74 80,94 68,100 C54,100 44,98 40,92 Z" fill="#F6F1E2"/><circle cx="82" cy="70" r="16" fill="#BC4A2A" opacity="0.72"/>
+</g>
+</svg>
+  <div class="threepanel" style="margin-top:.7rem">
+    <div class="p"><div class="lab">1 &middot; RGB context</div><div class="d">Post-fire darkening is visible, but terrain, soil, shadow, and land cover can look similar.</div></div>
+    <div class="p"><div class="lab">2 &middot; Post-fire NBR</div><div class="d">The burned core shifts toward lower NBR, producing a much stronger contrast with healthier vegetation.</div></div>
+    <div class="p"><div class="lab">3 &middot; dNBR change</div><div class="d">Subtracting post-fire NBR from pre-fire NBR suppresses stable background and accentuates the scar.</div></div>
+  </div>
+  <figcaption>Original schematics &mdash; not reproductions of the source imagery.</figcaption>
+</figure>
+
+<div class="callout">
+  <div class="h">KEY INTERPRETATION</div>
+  <p>The central-northern burn scar is the dominant fire-related feature: subtle in RGB, clearer in post-fire NBR, and most distinct in the immediate dNBR product.</p>
+</div>
+
+<div class="block" style="margin-top:2.4rem">
+  <span class="idx">RECOVERY &mdash; THE BURN SIGNAL FADES THROUGH 2025 INTO SPRING 2026</span>
+  <p>The time series describes a progressive weakening of the central burn signature, consistent with early vegetative recovery. Read it as a change trajectory, not a claim that the ecosystem is fully recovered.</p>
+  <div class="timeline">
+    <div class="tl"><div class="win">JAN&ndash;FEB 2025</div><div class="state">Burn scar clear</div><div class="d">Strong immediate post-fire contrast remains.</div><div class="bar"></div></div>
+    <div class="tl"><div class="win">MAR&ndash;APR 2025</div><div class="state">Still visible</div><div class="d">Core signal remains prominent.</div><div class="bar" style="opacity:.9"></div></div>
+    <div class="tl"><div class="win">MAY&ndash;JUN 2025</div><div class="state">Attenuating</div><div class="d">Growing season begins to soften contrast.</div><div class="bar" style="opacity:.8"></div></div>
+    <div class="tl"><div class="win">JUL&ndash;AUG 2025</div><div class="state">Less intense</div><div class="d">Meaningful early-stage vegetation response.</div><div class="bar" style="opacity:.68"></div></div>
+    <div class="tl"><div class="win">SEP&ndash;OCT 2025</div><div class="state">Further reduced</div><div class="d">Late growing-season signal continues down.</div><div class="bar" style="opacity:.55"></div></div>
+    <div class="tl"><div class="win">NOV&ndash;DEC 2025</div><div class="state">Diminished</div><div class="d">Central scar considerably less pronounced.</div><div class="bar" style="opacity:.42"></div></div>
+    <div class="tl"><div class="win">JAN&ndash;FEB 2026</div><div class="state">Faint remnants</div><div class="d">Only a weak core signal remains.</div><div class="bar" style="opacity:.3"></div></div>
+    <div class="tl"><div class="win">MAR&ndash;APR 2026</div><div class="state">Faint remnants</div><div class="d">Recovery trajectory continues.</div><div class="bar" style="opacity:.22"></div></div>
+  </div>
+</div>
+
+<div class="callout warn">
+  <div class="h">IMPORTANT CONFOUNDER</div>
+  <p>Not every bright dNBR signal is fire damage. Persistent bright signatures appear in the southern-right portion of the mapped view: irrigated fields and bare soil between crop cycles can produce chronically low NBR and therefore strong dNBR-like contrasts unrelated to fire.</p>
+</div>
+
+<div class="grid-3">
+  <div class="card"><h3>Recovery is uneven</h3><p>A fading burn signal doesn&rsquo;t mean every ecological process has returned to baseline.</p></div>
+  <div class="card"><h3>Land cover matters</h3><p>Agriculture, bare soil, and seasonal moisture can mimic disturbance.</p></div>
+  <div class="card"><h3>Context matters</h3><p>Persistent anomalies should be compared against known land use and multiple dates.</p></div>
+</div>
+
+<p class="meta">ANALYSIS DERIVED FROM THE UPLOADED NBR &amp; BURN-SEVERITY CASE-STUDY PDF; GRAPHICS ON THIS PAGE ARE ORIGINAL SCHEMATICS.</p>
+<div class="pager"><a href="falls-fire-scope.html"><span class="lab">&larr; PREVIOUS</span>02 &nbsp;Scope &amp; Data</a><a class="nx" href="falls-fire-further.html"><span class="lab">NEXT &rarr;</span>04 &nbsp;Further Study</a></div></div></main><footer class="foot" id="contact"><div class="wrap"><div class="foot-grid"><div><h3>Let&rsquo;s build something measurable.</h3><p class="meta">RYAN&nbsp;LI &nbsp;&middot;&nbsp; COMPUTER SCIENCE &amp; PHYSICS &nbsp;&middot;&nbsp; WESLEYAN UNIVERSITY</p></div><div class="foot-links"><a href="https://www.linkedin.com/">LinkedIn</a><a href="https://github.com/COMPRyanLI">GitHub</a><a href="#">Resume (PDF)</a><a href="#top">Back to top &uarr;</a></div></div></div></footer>
+</body>
+</html>

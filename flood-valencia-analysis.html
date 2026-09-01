@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flood Mapping Valencia &mdash; Analysis · Ryan Li</title>
+<meta name="description" content="Flood Mapping Valencia: Analysis">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="flood">
+<a id="top"></a><header class="topbar"><div class="wrap"><a class="mark" href="index.html">Ryan Li<span class="dot">.</span><small>SPECTRAL&nbsp;/&nbsp;SYSTEMS</small></a><nav class="nav"><a href="index.html#about">About</a><a href="index.html#work" class="here">Projects</a><a href="index.html#contact">Contact</a><a href="https://github.com/COMPRyanLI">GitHub</a></nav></div></header>
+<header class="cs-hero"><div class="wrap ticks"><div class="crumb"><a href="index.html#work">Projects</a> &nbsp;/&nbsp; Flood Mapping Valencia</div><div class="cs-title"><div><div class="kicker"><a href="flood-valencia.html">Flood Mapping Valencia</a></div><h1>Analysis</h1></div></div></div></header><nav class="tabs" aria-label="Case study sections"><div class="wrap"><a class="tab" href="flood-valencia.html"><span class="n">01</span>Overview</a><a class="tab" href="flood-valencia-scope.html"><span class="n">02</span>Scope &amp; Data</a><a class="tab active" href="flood-valencia-analysis.html" aria-current="page"><span class="n">03</span>Analysis</a><a class="tab" href="flood-valencia-further.html"><span class="n">04</span>Further Study</a></div></nav><main class="cs-body"><div class="wrap">
+<p>The strongest story is the spatial <strong>expansion and gradual recession</strong> of the water signature.</p>
+
+<figure class="figure block" style="margin-top:1.4rem">
+  <svg viewBox="0 0 490 112" role="img" aria-label="Three schematic panels showing the water signature confined at baseline, expanded after the flood, and receding during recovery">
+<g transform="translate(0,0)">
+  <rect x="0" y="0" width="150" height="112" rx="3" fill="#E8F0F1"/>
+  <path d="M0,44 C40,34 90,48 150,40 L150,112 L0,112 Z" fill="#CFE0D4"/>
+  <ellipse cx="60" cy="84" rx="26" ry="15" fill="#14788B"/>
+</g><g transform="translate(170,0)">
+  <rect x="0" y="0" width="150" height="112" rx="3" fill="#E8F0F1"/>
+  <path d="M0,44 C40,34 90,48 150,40 L150,112 L0,112 Z" fill="#CFE0D4"/>
+  <ellipse cx="60" cy="84" rx="26" ry="15" fill="#14788B"/><path d="M78,58 C108,50 132,66 148,58 C150,84 132,102 104,104 C82,104 78,84 78,58 Z" fill="#2E9BAE" opacity="0.9"/>
+</g><g transform="translate(340,0)">
+  <rect x="0" y="0" width="150" height="112" rx="3" fill="#E8F0F1"/>
+  <path d="M0,44 C40,34 90,48 150,40 L150,112 L0,112 Z" fill="#CFE0D4"/>
+  <ellipse cx="60" cy="84" rx="26" ry="15" fill="#14788B"/><path d="M84,66 C104,60 120,72 132,66 C132,86 118,98 100,98 C86,96 84,82 84,66 Z" fill="#2E9BAE" opacity="0.55"/>
+</g>
+</svg>
+  <div class="threepanel" style="margin-top:.7rem">
+    <div class="p"><div class="lab">Before &middot; confined baseline</div><div class="d">Water signatures largely restricted to La Albufera and other permanent bodies, with little apparent inundation across the agricultural flats.</div></div>
+    <div class="p"><div class="lab">Immediate post-event</div><div class="d">A much broader high-NDWI pattern extends across low-lying agricultural areas south of Valencia &mdash; consistent with widespread flooding after October 29.</div></div>
+    <div class="p"><div class="lab">Recovery &middot; toward baseline</div><div class="d">The 2025 maps show the water signature contracting; some low-lying areas stay wetter into summer, hinting at persistent saturation or drainage constraints.</div></div>
+  </div>
+  <figcaption>Original schematics &mdash; they do not reproduce the source screenshots or mapped pixels.</figcaption>
+</figure>
+
+<div class="pullquote">&ldquo;The value of the time series is not just locating water once; it is showing how the spatial pattern departs from baseline and then returns.&rdquo;</div>
+
+<div class="callout">
+  <div class="h">EXTERNAL CONSISTENCY CHECK</div>
+  <p>CEMS independently documented extensive flood impacts in Valencia province &mdash; more than 53,000 hectares affected as of October 31, 2024. This supports the broad regional severity of the event, but it is <strong>not</strong> a pixel-by-pixel validation of the source NDWI maps.</p>
+</div>
+
+<div class="block">
+  <span class="idx">WHAT THE IMAGERY SUPPORTS &mdash; AND WHAT STAYS A HYPOTHESIS</span>
+  <div class="notecols">
+    <div class="pos"><h3>Strongly supported</h3>
+      <ul>
+        <li>Water is spectrally dark in NIR relative to many land surfaces.</li>
+        <li>NDWI highlights a larger water / wet-surface footprint post-event than in the pre-event windows.</li>
+        <li>The strongest changes occur in low-lying agriculture, channels, and the La Albufera system.</li>
+        <li>The 2025 composites show a general movement back toward the pre-event pattern.</li>
+      </ul>
+    </div>
+    <div class="neg"><h3>Needs validation</h3>
+      <ul>
+        <li>High NDWI can be open water or very wet surfaces; one fixed threshold is not universally reliable.</li>
+        <li>Long date-window composites can blur the short-lived maximum inundation footprint.</li>
+        <li>Phenology, sediment / turbidity, built surfaces, shadow, and cloud can all affect index values.</li>
+        <li>Persistent summer anomalies suggest saturation or drainage issues, but imagery alone can&rsquo;t attribute the cause.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="block">
+  <span class="idx">CHOOSING THE RIGHT SIGNAL FOR THE QUESTION</span>
+  <table class="tbl">
+    <thead><tr><th>Question</th><th>Best signal</th><th>Interpretation</th><th>Caution</th></tr></thead>
+    <tbody>
+      <tr><td>Where is open water?</td><td>NDWI</td><td>Green&ndash;NIR contrast</td><td>Threshold varies</td></tr>
+      <tr><td>Where is canopy moisture changing?</td><td>NDMI / NIR&ndash;SWIR change</td><td>Moisture + vegetation response</td><td>Land-cover controls matter</td></tr>
+      <tr><td>How severe was wildfire damage?</td><td>NBR / dNBR</td><td>Burn severity</td><td>Not a flood class</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="meta">SOURCE-DERIVED FINDINGS: UPLOADED VALENCIA FLOOD-MAPPING PDF. EXTERNAL BENCHMARK: COPERNICUS EMS.</p>
+<div class="pager"><a href="flood-valencia-scope.html"><span class="lab">&larr; PREVIOUS</span>02 &nbsp;Scope &amp; Data</a><a class="nx" href="flood-valencia-further.html"><span class="lab">NEXT &rarr;</span>04 &nbsp;Further Study</a></div></div></main><footer class="foot" id="contact"><div class="wrap"><div class="foot-grid"><div><h3>Let&rsquo;s build something measurable.</h3><p class="meta">RYAN&nbsp;LI &nbsp;&middot;&nbsp; COMPUTER SCIENCE &amp; PHYSICS &nbsp;&middot;&nbsp; WESLEYAN UNIVERSITY</p></div><div class="foot-links"><a href="https://www.linkedin.com/">LinkedIn</a><a href="https://github.com/COMPRyanLI">GitHub</a><a href="#">Resume (PDF)</a><a href="#top">Back to top &uarr;</a></div></div></div></footer>
+</body>
+</html>

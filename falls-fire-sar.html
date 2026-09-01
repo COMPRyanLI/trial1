@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falls Fire &mdash; Why SAR Matters · Ryan Li</title>
+<meta name="description" content="Falls Fire: Why SAR Matters">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="fire">
+<a id="top"></a><header class="topbar"><div class="wrap"><a class="mark" href="index.html">Ryan Li<span class="dot">.</span><small>SPECTRAL&nbsp;/&nbsp;SYSTEMS</small></a><nav class="nav"><a href="index.html#about">About</a><a href="index.html#work" class="here">Projects</a><a href="index.html#contact">Contact</a><a href="https://github.com/COMPRyanLI">GitHub</a></nav></div></header>
+<header class="cs-hero"><div class="wrap ticks"><div class="crumb"><a href="index.html#work">Projects</a> &nbsp;/&nbsp; Falls Fire</div><div class="cs-title"><div><div class="kicker"><a href="falls-fire.html">Falls Fire</a></div><h1>Why SAR Matters</h1></div></div></div></header><nav class="tabs" aria-label="Case study sections"><div class="wrap"><a class="tab" href="falls-fire.html"><span class="n">01</span>Overview</a><a class="tab" href="falls-fire-scope.html"><span class="n">02</span>Scope &amp; Data</a><a class="tab" href="falls-fire-analysis.html"><span class="n">03</span>Analysis</a><a class="tab" href="falls-fire-further.html"><span class="n">04</span>Further Study</a><a class="tab active" href="falls-fire-sar.html" aria-current="page"><span class="n">05</span>Why SAR Matters</a></div></nav><main class="cs-body"><div class="wrap">
+<div class="grid-2">
+  <div>
+    <p><strong>Synthetic Aperture Radar (SAR)</strong> &mdash; such as Sentinel-1 C-band radar &mdash; provides <strong>all-weather, day-and-night imaging</strong>. That matters when smoke or cloud makes optical imagery hard to use during or right after a fire.</p>
+    <div class="grid-2" style="margin-top:1.2rem">
+      <div class="card"><h3 style="color:var(--nir)">Optical NBR</h3><p><strong>Best for spectral burn response.</strong> Directly exploits the NIR&ndash;SWIR behaviour of vegetation, moisture, char, and exposed ground.</p></div>
+      <div class="card"><h3 style="color:var(--accent)">SAR change</h3><p><strong>Best as a complementary view.</strong> Sensitive to surface roughness, structure, moisture, and geometry; useful when optical observations are missing.</p></div>
+    </div>
+  </div>
+  <figure class="figure">
+    <svg viewBox="0 0 520 300" role="img" aria-label="Concept diagram: cloud can hide the surface from an optical sensor, while radar images through cloud and darkness">
+  <rect width="520" height="300" fill="none"/>
+  <path d="M0,210 C120,180 200,200 300,170 C380,146 460,178 520,160 L520,300 L0,300 Z" fill="var(--accent-2)" opacity="0.85"/>
+  <path d="M150,240 C170,206 210,206 226,236 C250,232 264,254 244,266 L172,266 C150,266 146,250 150,240 Z" fill="var(--accent-deep)"/>
+  <!-- satellite -->
+  <g transform="translate(360,40)"><rect x="-16" y="-8" width="32" height="16" rx="2" fill="var(--ink)"/><rect x="6" y="-4" width="16" height="8" fill="var(--accent)"/></g>
+  <!-- cloud -->
+  <g fill="#c9d2d6"><ellipse cx="180" cy="96" rx="52" ry="24"/><ellipse cx="130" cy="104" rx="34" ry="20"/><ellipse cx="222" cy="106" rx="30" ry="18"/></g>
+  <!-- optical beam blocked -->
+  <line x1="150" y1="60" x2="176" y2="120" stroke="var(--swir)" stroke-width="2.5" stroke-dasharray="5 5"/>
+  <!-- radar beam through -->
+  <line x1="366" y1="56" x2="300" y2="196" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="5 5"/>
+  <text x="70" y="40" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="var(--ink)">Optical &#8212; cloud and smoke can hide the surface</text>
+  <text x="300" y="30" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="var(--ink)">SAR &#8212; day, night, all&#8209;weather</text>
+</svg>
+    <figcaption>Use SAR change as a complementary line of evidence &mdash; not a direct substitute for optical burn-severity classes.</figcaption>
+  </figure>
+</div>
+
+<div class="callout">
+  <div class="h">CONNECTION TO THE SUPPLIED SAR BACKGROUND</div>
+  <p>For flood mapping, smooth open water often produces low radar backscatter, while wind, rain, and incidence angle alter the return. The same lesson applies here: SAR is powerful because it works through cloud and darkness, but interpretation depends on acquisition geometry and surface conditions.</p>
+</div>
+
+<p>For burned-area mapping, ESA Fire CCI methods demonstrate an explicit <strong>SAR&ndash;optical fusion</strong> approach: Sentinel-1 supplies temporally consistent, cloud-independent observations while Sentinel-2 contributes the spectral burn indices.</p>
+
+<p class="meta">SAR PROPERTIES: ESA SENTINEL-1. SAR&ndash;OPTICAL BURNED-AREA INTEGRATION: ESA FIRE CCI.</p>
+<div class="pager"><a href="falls-fire-further.html"><span class="lab">&larr; PREVIOUS</span>04 &nbsp;Further Study</a></div></div></main><footer class="foot" id="contact"><div class="wrap"><div class="foot-grid"><div><h3>Let&rsquo;s build something measurable.</h3><p class="meta">RYAN&nbsp;LI &nbsp;&middot;&nbsp; COMPUTER SCIENCE &amp; PHYSICS &nbsp;&middot;&nbsp; WESLEYAN UNIVERSITY</p></div><div class="foot-links"><a href="https://www.linkedin.com/">LinkedIn</a><a href="https://github.com/COMPRyanLI">GitHub</a><a href="#">Resume (PDF)</a><a href="#top">Back to top &uarr;</a></div></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flood Mapping Valencia &mdash; Scope &amp; Data · Ryan Li</title>
+<meta name="description" content="Flood Mapping Valencia: Scope &amp; Data">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="flood">
+<a id="top"></a><header class="topbar"><div class="wrap"><a class="mark" href="index.html">Ryan Li<span class="dot">.</span><small>SPECTRAL&nbsp;/&nbsp;SYSTEMS</small></a><nav class="nav"><a href="index.html#about">About</a><a href="index.html#work" class="here">Projects</a><a href="index.html#contact">Contact</a><a href="https://github.com/COMPRyanLI">GitHub</a></nav></div></header>
+<header class="cs-hero"><div class="wrap ticks"><div class="crumb"><a href="index.html#work">Projects</a> &nbsp;/&nbsp; Flood Mapping Valencia</div><div class="cs-title"><div><div class="kicker"><a href="flood-valencia.html">Flood Mapping Valencia</a></div><h1>Scope &amp; Data</h1></div></div></div></header><nav class="tabs" aria-label="Case study sections"><div class="wrap"><a class="tab" href="flood-valencia.html"><span class="n">01</span>Overview</a><a class="tab active" href="flood-valencia-scope.html" aria-current="page"><span class="n">02</span>Scope &amp; Data</a><a class="tab" href="flood-valencia-analysis.html"><span class="n">03</span>Analysis</a><a class="tab" href="flood-valencia-further.html"><span class="n">04</span>Further Study</a></div></nav><main class="cs-body"><div class="wrap">
+<div class="block">
+  <span class="idx">STUDY AREA</span>
+  <p>Valencia and the low-lying coastal plain to the south. The interpretation centres on <strong>La Albufera</strong>, the surrounding rice-growing lowlands, and channels draining toward the coast &mdash; places where water and saturated soils create a strong spectral signal after the flood.</p>
+</div>
+
+<div class="grid-2">
+  <div class="block">
+    <span class="idx">DATA SOURCE</span>
+    <p>Sentinel-2 Level-2A surface reflectance, via the harmonized collection in Google Earth Engine. MSI carries 13 bands; the relevant ones span visible green, near-infrared, and shortwave infrared.</p>
+    <table class="tbl">
+      <thead><tr><th>Band</th><th>Role</th><th>Centre</th><th>Res.</th></tr></thead>
+      <tbody>
+        <tr><td>B3</td><td>Green</td><td class="data">560 nm</td><td class="data">10 m</td></tr>
+        <tr><td>B8</td><td>NIR</td><td class="data">842 nm</td><td class="data">10 m</td></tr>
+        <tr><td>B11</td><td>SWIR1</td><td class="data">1610 nm</td><td class="data">20 m</td></tr>
+        <tr><td>B12</td><td>SWIR2</td><td class="data">2190 nm</td><td class="data">20 m</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="block">
+    <span class="idx">PROCESSING LOGIC</span>
+    <div class="card"><p style="color:var(--ink)"><strong>Filter by area + date</strong> &rarr; screen / mask clouds &rarr; composite reflectance &rarr; compute index.</p><p style="margin-top:.6rem">The source figures show mean composites in Earth Engine. For production, cloud and shadow handling should be documented explicitly, because residual cloud can strongly bias water indices.</p></div>
+  </div>
+</div>
+
+<div class="block">
+  <span class="idx">TEMPORAL DESIGN &mdash; FIVE ANALYSIS WINDOWS</span>
+  <div class="grid-3" style="grid-template-columns:repeat(5,1fr)">
+    <div class="card"><p style="color:var(--ink)"><strong>Jun&ndash;Jul 2024</strong></p><p>Earlier pre-event baseline.</p></div>
+    <div class="card"><p style="color:var(--ink)"><strong>Aug 1&ndash;Oct 28</strong></p><p>Immediate pre-event baseline.</p></div>
+    <div class="card accent"><p style="color:var(--ink)"><strong>Oct 29&ndash;Dec 30</strong></p><p>Immediate post-event composite.</p></div>
+    <div class="card"><p style="color:var(--ink)"><strong>Feb&ndash;May 2025</strong></p><p>Early recovery.</p></div>
+    <div class="card"><p style="color:var(--ink)"><strong>Jun&ndash;Aug 2025</strong></p><p>Later recovery.</p></div>
+  </div>
+  <div class="callout warn" style="margin-top:1rem">
+    <div class="h">ACCURACY NOTE</div>
+    <p>The source narrative calls these &ldquo;four temporal windows&rdquo; but enumerates five. This study preserves the five actual intervals and flags the discrepancy rather than silently dropping one.</p>
+  </div>
+</div>
+
+<h2 style="margin-top:2.6rem">The spectral logic: NDWI maps water; NIR&ndash;SWIR explains a broader signal</h2>
+
+<div class="grid-2" style="margin-top:1.2rem">
+  <div>
+    <span class="idx">PRIMARY FLOOD INDEX</span>
+    <div class="formula"><div class="eq">NDWI = (Green &minus; NIR) / (Green + NIR)</div>
+      <div class="note">Open water absorbs NIR strongly, so it is dark in B8 while staying more reflective in green &mdash; a positive Green&ndash;NIR contrast. Positive NDWI often indicates open water, but a universal zero threshold shouldn&rsquo;t be assumed across all land covers.</div>
+    </div>
+  </div>
+  <div>
+    <span class="idx">BACKGROUND CONCEPT</span>
+    <div class="formula"><div class="eq">NBR = (NIR &minus; SWIR) / (NIR + SWIR)</div>
+      <div class="note">Healthy vegetation has high NIR and lower SWIR; fire damage reverses that (NIR falls, SWIR rises), so NBR drops. dNBR = NBR<sub>pre</sub> &minus; NBR<sub>post</sub> is widely used for wildfire burn severity.</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout">
+  <div class="h">IMPORTANT INTERPRETATION RULE</div>
+  <p>Do not label flood pixels with wildfire burn-severity classes. The NBR background is useful because it explains why NIR&ndash;SWIR combinations are sensitive to vegetation and moisture. For Valencia, a moisture-oriented metric such as NDMI &mdash; or a carefully defined change index &mdash; is more defensible for flood recovery than reusing dNBR thresholds.</p>
+</div>
+
+<p class="meta">BAND SPECS VERIFIED AGAINST SENTINEL-2 DOCUMENTATION &amp; EARTH ENGINE. NDWI / NBR DEFINITIONS VERIFIED AGAINST USGS LITERATURE.</p>
+<div class="pager"><a href="flood-valencia.html"><span class="lab">&larr; PREVIOUS</span>01 &nbsp;Overview</a><a class="nx" href="flood-valencia-analysis.html"><span class="lab">NEXT &rarr;</span>03 &nbsp;Analysis</a></div></div></main><footer class="foot" id="contact"><div class="wrap"><div class="foot-grid"><div><h3>Let&rsquo;s build something measurable.</h3><p class="meta">RYAN&nbsp;LI &nbsp;&middot;&nbsp; COMPUTER SCIENCE &amp; PHYSICS &nbsp;&middot;&nbsp; WESLEYAN UNIVERSITY</p></div><div class="foot-links"><a href="https://www.linkedin.com/">LinkedIn</a><a href="https://github.com/COMPRyanLI">GitHub</a><a href="#">Resume (PDF)</a><a href="#top">Back to top &uarr;</a></div></div></div></footer>
+</body>
+</html>

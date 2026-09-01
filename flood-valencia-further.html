@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flood Mapping Valencia &mdash; Further Study · Ryan Li</title>
+<meta name="description" content="Flood Mapping Valencia: Further Study">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="flood">
+<a id="top"></a><header class="topbar"><div class="wrap"><a class="mark" href="index.html">Ryan Li<span class="dot">.</span><small>SPECTRAL&nbsp;/&nbsp;SYSTEMS</small></a><nav class="nav"><a href="index.html#about">About</a><a href="index.html#work" class="here">Projects</a><a href="index.html#contact">Contact</a><a href="https://github.com/COMPRyanLI">GitHub</a></nav></div></header>
+<header class="cs-hero"><div class="wrap ticks"><div class="crumb"><a href="index.html#work">Projects</a> &nbsp;/&nbsp; Flood Mapping Valencia</div><div class="cs-title"><div><div class="kicker"><a href="flood-valencia.html">Flood Mapping Valencia</a></div><h1>Further Study</h1></div></div></div></header><nav class="tabs" aria-label="Case study sections"><div class="wrap"><a class="tab" href="flood-valencia.html"><span class="n">01</span>Overview</a><a class="tab" href="flood-valencia-scope.html"><span class="n">02</span>Scope &amp; Data</a><a class="tab" href="flood-valencia-analysis.html"><span class="n">03</span>Analysis</a><a class="tab active" href="flood-valencia-further.html" aria-current="page"><span class="n">04</span>Further Study</a></div></nav><main class="cs-body"><div class="wrap">
+<p>Turning descriptive mapping into a validated, quantitative flood-recovery analysis &mdash; presented as a roadmap of next questions, not unfinished work.</p>
+<div class="road block" style="margin-top:1.4rem"><div class="rc"><div class="num data">01</div><div><h3>Reconstruct peak inundation with SAR</h3><p>Radar sees through cloud and suits event-day flood mapping. Compare Sentinel-1 water extent with CEMS rapid mapping and optical Sentinel-2 scenes.</p></div></div><div class="rc"><div class="num data">02</div><div><h3>Shorter time steps, quantified recession</h3><p>Replace broad multi-month composites with scene-level or 5&ndash;10-day summaries. Track flooded / wet area over time and estimate how fast each zone returns to baseline.</p></div></div><div class="rc"><div class="num data">03</div><div><h3>Compare water indices &amp; thresholds</h3><p>Benchmark NDWI against MNDWI or AWEI, and calibrate thresholds by land cover rather than assuming a universal cutoff.</p></div></div><div class="rc"><div class="num data">04</div><div><h3>Add moisture &amp; vegetation recovery</h3><p>Use NDMI or a documented NIR&ndash;SWIR change metric to separate open-water recession from lingering soil and canopy moisture. Keep wildfire NBR/dNBR interpretation distinct.</p></div></div><div class="rc"><div class="num data">05</div><div><h3>Explain spatial controls</h3><p>Overlay elevation, drainage networks, impervious cover, agricultural land use, and the La Albufera hydrologic system to test why some areas stay wet longer.</p></div></div><div class="rc"><div class="num data">06</div><div><h3>Move from hazard to exposure</h3><p>Intersect validated flood extent with roads, buildings, cropland, and municipality boundaries to quantify who and what was exposed &mdash; reporting uncertainty explicitly.</p></div></div></div>
+
+<div class="card accent">
+  <h3>Best next deliverable</h3>
+  <p>An interactive pre / post / recovery map slider with a synchronized area-over-time chart &mdash; preserving the intuitive visual story while adding quantitative evidence and visible uncertainty.</p>
+</div>
+
+<div class="callout">
+  <div class="h">MAKE UNCERTAINTY VISIBLE</div>
+  <p>A small &ldquo;what this map can and cannot tell you&rdquo; panel keeps the public-facing study credible and stops index values from being read as direct flood depth or damage.</p>
+</div>
+
+<p class="meta">FUTURE-STUDY ITEMS ARE RESEARCH EXTENSIONS, NOT CLAIMS ALREADY ESTABLISHED BY THE UPLOADED ANALYSIS.</p>
+<div class="pager"><a href="flood-valencia-analysis.html"><span class="lab">&larr; PREVIOUS</span>03 &nbsp;Analysis</a></div></div></main><footer class="foot" id="contact"><div class="wrap"><div class="foot-grid"><div><h3>Let&rsquo;s build something measurable.</h3><p class="meta">RYAN&nbsp;LI &nbsp;&middot;&nbsp; COMPUTER SCIENCE &amp; PHYSICS &nbsp;&middot;&nbsp; WESLEYAN UNIVERSITY</p></div><div class="foot-links"><a href="https://www.linkedin.com/">LinkedIn</a><a href="https://github.com/COMPRyanLI">GitHub</a><a href="#">Resume (PDF)</a><a href="#top">Back to top &uarr;</a></div></div></div></footer>
+</body>
+</html>

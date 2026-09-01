@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ryan Li — Spectral &amp; Systems</title>
+<meta name="description" content="Computer science and physics student working on machine learning, remote sensing, and software.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a id="top"></a><header class="topbar"><div class="wrap"><a class="mark" href="index.html">Ryan Li<span class="dot">.</span><small>SPECTRAL&nbsp;/&nbsp;SYSTEMS</small></a><nav class="nav"><a href="index.html#about">About</a><a href="index.html#work">Projects</a><a href="index.html#contact">Contact</a><a href="https://github.com/COMPRyanLI">GitHub</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap ticks">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-coord meta">
+        <span>LAT <b>41.556&deg;N</b></span><span>LON <b>72.657&deg;W</b></span><span>WESLEYAN&nbsp;/&nbsp;DARTMOUTH</span>
+      </div>
+      <h1>Ryan&nbsp;<span class="surname">Li</span></h1>
+      <p class="role">I turn <em>raw signal</em> &mdash; satellite bands, sensor data, model output &mdash; into things people can read.</p>
+      <p class="lede">Computer science &amp; physics student building at the seam of machine learning, remote sensing, and software. Below: two earth-observation case studies that trace how a spectral index becomes a story.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="#work"><span class="tk"></span>See the case studies</a>
+        <a class="btn" href="#about">About me</a>
+      </div>
+    </div>
+    <div class="chartcard">
+      <svg viewBox="0 0 560 320" role="img" aria-label="Reflectance curves for healthy vegetation and burned or dry surfaces across visible, NIR and SWIR wavelengths">
+  <rect x="70" y="26" width="470" height="224" fill="none"/>
+  <!-- band shading -->
+  <rect x="235" y="26" width="80" height="224" fill="var(--nir)" opacity="0.10"/>
+  <rect x="420" y="26" width="90" height="224" fill="var(--swir)" opacity="0.10"/>
+  <!-- axes -->
+  <line x1="70" y1="250" x2="540" y2="250" stroke="var(--ink)" stroke-width="1.4"/>
+  <line x1="70" y1="26" x2="70" y2="250" stroke="var(--ink)" stroke-width="1.4"/>
+  <!-- ticks -->
+  <g stroke="var(--line)" stroke-width="1">
+    <line x1="150" y1="250" x2="150" y2="256"/><line x1="275" y1="250" x2="275" y2="256"/>
+    <line x1="400" y1="250" x2="400" y2="256"/><line x1="465" y1="250" x2="465" y2="256"/>
+  </g>
+  <!-- vegetation curve (green) -->
+  <path d="M70,214 C130,208 175,196 220,120 S 262,74 305,82 S 385,126 445,164 S 500,188 540,198"
+        fill="none" stroke="var(--nir)" stroke-width="3" stroke-linecap="round"/>
+  <!-- burned/dry curve (rust) -->
+  <path d="M70,224 C150,214 200,198 250,172 S 330,140 390,124 S 470,112 540,120"
+        fill="none" stroke="var(--swir)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"/>
+  <!-- labels -->
+  <text x="275" y="20" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--nir)">NIR</text>
+  <text x="465" y="20" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--swir)">SWIR</text>
+  <text x="150" y="272" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-faint)">visible</text>
+  <text x="275" y="272" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-faint)">842nm</text>
+  <text x="465" y="272" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-faint)">2190nm</text>
+  <text x="70" y="296" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)">wavelength &#8594;</text>
+  <text x="62" y="40" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-soft)" transform="rotate(-90 62 40)">reflectance &#8594;</text>
+</svg>
+      <div class="cap"><span class="meta">FIG.00 &mdash; NIR&ndash;SWIR REFLECTANCE</span><span class="meta">SCHEMATIC</span></div>
+      <div class="legend-row">
+        <span><i class="swatch" style="background:var(--nir)"></i>Healthy vegetation</span>
+        <span><i class="swatch" style="background:var(--swir)"></i>Burned / dry surface</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="about"><div class="wrap">
+  <div class="section-head">
+    <div><span class="idx">01 / ABOUT</span><h2>A physicist who ships software</h2></div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p>I&rsquo;m Ryan &mdash; a computer science and physics student at Wesleyan University, dual-enrolled through Dartmouth&rsquo;s Thayer School of Engineering. I like problems where the physics of a measurement and the engineering of a system have to agree with each other.</p>
+      <p>Most of my work sits in three overlapping places: applied machine learning, platform and agent engineering, and experimental physics. Lately that has meant a backend internship building retrieval systems at PhysaFlow, agent-tooling side projects, plasma-spectroscopy research, and the remote-sensing case studies on this page &mdash; reading the land through Sentinel-2 and Sentinel-1.</p>
+      <p>The two studies below are built the way I like to work: state the question, show the signal, then say plainly what the data can and cannot support.</p>
+    </div>
+    <div class="specs">
+      <div class="spec"><span class="k">STUDY</span><span class="v">B.A. Computer Science &amp; Physics, Wesleyan University</span></div>
+      <div class="spec"><span class="k">DUAL</span><span class="v">Dartmouth &mdash; Thayer School of Engineering</span></div>
+      <div class="spec"><span class="k">NOW</span><span class="v">Backend engineering intern, PhysaFlow</span></div>
+      <div class="spec"><span class="k">FOCUS</span><span class="v">Applied ML &middot; agent / platform infra &middot; experimental physics</span></div>
+      <div class="spec"><span class="k">TOOLS</span><span class="v">Python, Earth Engine, remote sensing, LLM systems</span></div>
+      <div class="spec"><span class="k">CODE</span><span class="v"><a href="https://github.com/COMPRyanLI">github.com/COMPRyanLI</a></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="work"><div class="wrap">
+  <div class="section-head">
+    <div><span class="idx">02 / SELECTED WORK</span><h2>Reading the land from orbit</h2></div>
+    <p>Two remote-sensing case studies. Each opens to a multi-section walkthrough &mdash; overview, data, analysis, and where it goes next.</p>
+  </div>
+  <div class="projects">
+
+    <a class="proj" href="falls-fire.html">
+      <div class="proj-thumb"><svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Schematic of a burn scar as it appears in post-fire NBR and in dNBR change">
+  <rect width="320" height="200" fill="#EDF0EC"/>
+  <!-- left: post-fire NBR -->
+  <g>
+    <rect x="16" y="18" width="132" height="150" rx="3" fill="#3E6b42"/>
+    <path d="M40,150 C70,120 88,132 120,86 C104,120 92,150 78,166 C60,168 46,160 40,150 Z" fill="#F3EEDE"/>
+    <path d="M62,150 C78,128 92,124 104,104" stroke="#26140f" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="16" y="184" font-family="IBM Plex Mono, monospace" font-size="9" fill="#5b6a54">NBR</text>
+  </g>
+  <!-- right: dNBR -->
+  <g>
+    <rect x="172" y="18" width="132" height="150" rx="3" fill="#3E6b42"/>
+    <path d="M196,150 C226,120 244,132 276,86 C260,120 248,150 234,166 C216,168 202,160 196,150 Z" fill="#F6F1E2"/>
+    <circle cx="248" cy="118" r="20" fill="#BC4A2A" opacity="0.75"/>
+    <text x="172" y="184" font-family="IBM Plex Mono, monospace" font-size="9" fill="#5b6a54">dNBR</text>
+  </g>
+</svg></div>
+      <div class="proj-body">
+        <span class="code">CS-01 &middot; MALHEUR NATIONAL FOREST, OREGON &middot; 2024&ndash;26</span>
+        <h3>Falls Fire &mdash; Burn Severity &amp; Recovery</h3>
+        <p class="desc">How Sentinel-2 NBR and dNBR separate a wildfire&rsquo;s spectral signature from natural-colour ambiguity, then track an 18-month recovery signal after a 150,320-acre burn.</p>
+        <div class="tags"><span class="tag">Sentinel-2</span><span class="tag">NBR / dNBR</span><span class="tag">Time series</span><span class="tag">Earth Engine</span></div>
+        <span class="proj-go">Open case study &mdash; 5 sections <span class="arrow">&rarr;</span></span>
+      </div>
+    </a>
+
+    <a class="proj" href="flood-valencia.html">
+      <div class="proj-thumb"><svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Schematic of a water signature expanding across a low-lying plain and receding">
+  <rect width="320" height="200" fill="#E8F0F1"/>
+  <path d="M0,60 C90,44 150,70 210,58 C260,48 300,64 320,58 L320,200 L0,200 Z" fill="#CFE0D4"/>
+  <!-- permanent water body -->
+  <ellipse cx="120" cy="150" rx="40" ry="24" fill="#14788B"/>
+  <!-- flood expansion -->
+  <path d="M150,120 C210,108 262,132 300,120 C304,150 292,176 250,182 C196,190 156,168 150,120 Z" fill="#2E9BAE" opacity="0.85"/>
+  <!-- coast -->
+  <path d="M300,20 L320,20 L320,200 L296,200 C304,150 308,80 300,20 Z" fill="#BFE0E6"/>
+  <text x="14" y="30" font-family="IBM Plex Mono, monospace" font-size="9" fill="#3d6a72">NDWI &#183; water signature</text>
+</svg></div>
+      <div class="proj-body">
+        <span class="code">CS-02 &middot; VALENCIA, SPAIN &middot; OCT 2024&ndash;2025</span>
+        <h3>Flood Mapping &mdash; Valencia DANA</h3>
+        <p class="desc">Multi-temporal NDWI mapping of the October 2024 Valencia flood: baseline, inland expansion, and recession &mdash; using the NIR&ndash;SWIR spectral logic carefully, without borrowing wildfire severity classes.</p>
+        <div class="tags"><span class="tag">Sentinel-2</span><span class="tag">NDWI</span><span class="tag">DANA flood</span><span class="tag">Recovery</span></div>
+        <span class="proj-go">Open case study &mdash; 4 sections <span class="arrow">&rarr;</span></span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-head" style="margin-top:2.6rem">
+    <div><span class="idx">03 / ALSO BUILDING</span><h2>Systems &amp; research</h2></div>
+  </div>
+  <div class="mini-grid">
+    <a class="mini" href="https://github.com/COMPRyanLI">
+      <span class="code">PLATFORM &middot; GITHUB &#8599;</span><h4>AgentForge</h4>
+      <p>Self-hosted, no-code platform for composing and running AI agents.</p></a>
+    <a class="mini" href="https://github.com/COMPRyanLI">
+      <span class="code">INFRA &middot; GITHUB &#8599;</span><h4>Keel</h4>
+      <p>Reliability and observability layer that keeps agent workflows honest.</p></a>
+    <a class="mini" href="https://github.com/COMPRyanLI">
+      <span class="code">RAG &middot; PHYSAFLOW &#8599;</span><h4>NOI Retrieval Service</h4>
+      <p>Backend retrieval service for the NOI product, built during my internship.</p></a>
+    <a class="mini" href="https://github.com/COMPRyanLI">
+      <span class="code">RESEARCH &middot; GITHUB &#8599;</span><h4>Plasma Spectroscopy</h4>
+      <p>Automating the analysis of plasma emission spectra in the lab.</p></a>
+  </div>
+</div></section>
+</main><footer class="foot" id="contact"><div class="wrap"><div class="foot-grid"><div><h3>Let&rsquo;s build something measurable.</h3><p class="meta">RYAN&nbsp;LI &nbsp;&middot;&nbsp; COMPUTER SCIENCE &amp; PHYSICS &nbsp;&middot;&nbsp; WESLEYAN UNIVERSITY</p></div><div class="foot-links"><a href="https://www.linkedin.com/">LinkedIn</a><a href="https://github.com/COMPRyanLI">GitHub</a><a href="#">Resume (PDF)</a><a href="#top">Back to top &uarr;</a></div></div></div></footer>
+</body>
+</html>

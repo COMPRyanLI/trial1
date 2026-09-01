@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falls Fire &mdash; Further Study · Ryan Li</title>
+<meta name="description" content="Falls Fire: Further Study">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="fire">
+<a id="top"></a><header class="topbar"><div class="wrap"><a class="mark" href="index.html">Ryan Li<span class="dot">.</span><small>SPECTRAL&nbsp;/&nbsp;SYSTEMS</small></a><nav class="nav"><a href="index.html#about">About</a><a href="index.html#work" class="here">Projects</a><a href="index.html#contact">Contact</a><a href="https://github.com/COMPRyanLI">GitHub</a></nav></div></header>
+<header class="cs-hero"><div class="wrap ticks"><div class="crumb"><a href="index.html#work">Projects</a> &nbsp;/&nbsp; Falls Fire</div><div class="cs-title"><div><div class="kicker"><a href="falls-fire.html">Falls Fire</a></div><h1>Further Study</h1></div></div></div></header><nav class="tabs" aria-label="Case study sections"><div class="wrap"><a class="tab" href="falls-fire.html"><span class="n">01</span>Overview</a><a class="tab" href="falls-fire-scope.html"><span class="n">02</span>Scope &amp; Data</a><a class="tab" href="falls-fire-analysis.html"><span class="n">03</span>Analysis</a><a class="tab active" href="falls-fire-further.html" aria-current="page"><span class="n">04</span>Further Study</a><a class="tab" href="falls-fire-sar.html"><span class="n">05</span>Why SAR Matters</a></div></nav><main class="cs-body"><div class="wrap">
+<p>Turning a strong visual case study into a defensible monitoring framework &mdash; six research extensions, each a candidate for a future interactive layer.</p>
+<div class="road block" style="margin-top:1.4rem"><div class="rc"><div class="num data">01</div><div><h3>Validate severity</h3><p>Calibrate dNBR against independent evidence &mdash; field Composite Burn Index observations or official burn-severity products &mdash; instead of treating generic thresholds as universally transferable.</p></div></div><div class="rc"><div class="num data">02</div><div><h3>Control land cover</h3><p>Separate fire from agriculture and bare soil using land-cover masks, seasonal baselines, or stratified analysis, so irrigated fields and crop-cycle bare soil don&rsquo;t dominate the change product.</p></div></div><div class="rc"><div class="num data">03</div><div><h3>Fuse SAR + optical</h3><p>Use Sentinel-1 when Sentinel-2 is obscured. Pair radar change metrics with NBR/dNBR to hold temporal continuity through smoke, cloud, and winter weather.</p></div></div><div class="rc"><div class="num data">04</div><div><h3>Quantify recovery</h3><p>Move beyond visual fading: track median dNBR, percent area above locally validated thresholds, and recovery trajectories by vegetation type or severity zone.</p></div></div><div class="rc"><div class="num data">05</div><div><h3>Add terrain + hydrology</h3><p>Overlay slope, drainage, soils, and rainfall to find where severe vegetation loss could translate into greater runoff, erosion, or debris-flow concern.</p></div></div><div class="rc"><div class="num data">06</div><div><h3>Test alternative indices</h3><p>Compare RdNBR, RBR, NDVI, and moisture indices &mdash; relative indices may reduce sensitivity to pre-fire vegetation density and better separate recovery from seasonal change.</p></div></div></div>
+
+<div class="callout">
+  <div class="h">WEBSITE-READY MODULE &mdash; INTERACTIVE RECOVERY EXPLORER</div>
+  <p>A date scrubber updates the map, a severity legend, and a small recovery chart together. Hovering a pixel or zone reveals pre-fire NBR, post-fire NBR, dNBR, land-cover class, and the latest recovery value.</p>
+</div>
+
+<div class="card accent">
+  <h3>Design principle &mdash; separate observation from interpretation</h3>
+  <p>Show the index first; then explain what makes a signal plausibly fire-related. Keep the caveat next to the visual it qualifies.</p>
+</div>
+
+<p class="meta">FURTHER-STUDY RECOMMENDATIONS EXTEND THE UPLOADED CASE STUDY USING ESTABLISHED USGS / ESA BURN-SEVERITY AND SAR PRACTICES.</p>
+<div class="pager"><a href="falls-fire-analysis.html"><span class="lab">&larr; PREVIOUS</span>03 &nbsp;Analysis</a><a class="nx" href="falls-fire-sar.html"><span class="lab">NEXT &rarr;</span>05 &nbsp;Why SAR Matters</a></div></div></main><footer class="foot" id="contact"><div class="wrap"><div class="foot-grid"><div><h3>Let&rsquo;s build something measurable.</h3><p class="meta">RYAN&nbsp;LI &nbsp;&middot;&nbsp; COMPUTER SCIENCE &amp; PHYSICS &nbsp;&middot;&nbsp; WESLEYAN UNIVERSITY</p></div><div class="foot-links"><a href="https://www.linkedin.com/">LinkedIn</a><a href="https://github.com/COMPRyanLI">GitHub</a><a href="#">Resume (PDF)</a><a href="#top">Back to top &uarr;</a></div></div></div></footer>
+</body>
+</html>
